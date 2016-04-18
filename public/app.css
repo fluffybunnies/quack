@@ -52,3 +52,25 @@ div.clear {
 	width: auto;
 }
 
+.page-target {
+	text-align: center;
+}
+.page-admin {
+	padding: 2vh 1vw;
+}
+
+/* BEGIN Admin */
+.Admin {
+}
+.Admin-status {
+	margin-bottom: 1em;
+}
+.Admin-controls {
+}
+.Admin-btn {
+	font-size: 16px;
+	padding: 0 2em;
+}
+/* END Admin */
+
+
