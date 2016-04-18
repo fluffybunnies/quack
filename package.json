@@ -1,0 +1,27 @@
+{
+	"name": "quack",
+	"version": "0.0.1",
+	"description": "Quaaack",
+	"keywords": [
+		"quack"
+	],
+	"homepage": "https://github.com/fluffybunnies/quack",
+	"author": "fluffybunnies",
+	"license": "MIT",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:fluffybunnies/quack.git"
+	},
+	"dependencies": {
+		"sext": "0.1.6",
+		"mysql": "2.10.2"
+	},
+	"devDependencies": {
+	},
+	"bugs": {
+		"url": "https://github.com/fluffybunnies/quack/issues"
+	},
+	"scripts": {
+	}
+}
