@@ -1,6 +1,6 @@
 {
 	"authKey": "",
-	"port": "80",
+	"port": "3030",
 	"mysql": {
 		"host": "localhost",
 		"user": "root",
