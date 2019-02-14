@@ -18,11 +18,10 @@
 
 	// ----- Quack!
 	var quacking = false 
-		,videoId = 'YwNdDHEhm2g' //'LoR3qnpyu38'
-		,videoLength = 25000 //4500
-		,videoStart = 1
+		,videoId = 'LoR3qnpyu38'
+		,videoLength = 4500
 		,quackingTimeout = null
-		,$quacker = $('#quacker')
+		,$quacker
 	var listening = false
 		,listenStatusCheckInterval = 1000
 		,listenTimeout = null
@@ -54,26 +53,20 @@
 		quacking = true;
 		(function quack(){
 			console.log('QUACK!');
-			//if ($quacker) $quacker.remove();
-			//$quacker = $('<iframe src="//www.youtube.com/embed/'+videoId+'?autoplay=1&start='+videoStart+'" frameborder="0" style="width:0;height:0;position:absolute;left:-1px;top:-1px;"></iframe>');
-			//$('body').append($quacker);
-			//$quacker.bind('load',function(){
-			//	quackingTimeout = setTimeout(quack,videoLength);
-			//});
-
-			$('#quacker').attr('src','//www.youtube.com/embed/'+videoId+'?autoplay=1&start='+videoStart+'&'+Date.now()).bind('load',function(){
-				quackingTimeout = setTimeout(quack,videoLength)
-			})
+			if ($quacker) $quacker.remove();
+			$quacker = $('<iframe src="//www.youtube.com/embed/'+videoId+'?autoplay=1&start=1" frameborder="0" style="width:0;height:0;position:absolute;left:-1px;top:-1px;"></iframe>');
+			$('body').append($quacker);
+			$quacker.bind('load',function(){
+				quackingTimeout = setTimeout(quack,videoLength);
+			});
 		}());
 	}
 	function stopQuacking(){
 		quacking = false;
 		clearTimeout(quackingTimeout);
 		if ($quacker) {
-			//$quacker.remove();
-			//$quacker = null;
-
-			$quacker.attr('src','//www.youtube.com/embed/'+videoId+'?autoplay=0&start='+videoStart)
+			$quacker.remove();
+			$quacker = null;
 		}
 	}
 
