@@ -18,8 +18,8 @@
 
 	// ----- Quack!
 	var quacking = false 
-		,videoId = 'LoR3qnpyu38'
-		,videoLength = 4500
+		,videoId = 'YwNdDHEhm2g' //'LoR3qnpyu38'
+		,videoLength = 25000 //4500
 		,quackingTimeout = null
 		,$quacker
 	var listening = false
